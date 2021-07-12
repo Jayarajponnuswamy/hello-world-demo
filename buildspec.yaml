@@ -5,19 +5,17 @@ phases:
     runtime-versions:
       python: 3.x
     commands:
-      - pip3 install Flask
+      - echo Build started on `date`
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Python code...
-      - python test_app.py
+      
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - web.py
-    - appspec.yml
     - templates/layout.html
     - templates/test.html
     - scripts/mkdir.sh
